@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG for Department of Data Science</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/logo.png" alt="College Logo" class="logo"> <!-- Update the path to your logo -->
+            <h1>RAG for Department of Data Science</h1>
+        </div>
+
+        <form action="/get-answer" method="post">
+            <label for="question">Enter your question:</label>
+            <input type="text" id="question" name="question" required>
+            <button type="submit">Get Answer</button>
+        </form>
+
+        <!-- Only display question and answer-section if 'answer' exists -->
+        {% if answer %}
+        <div class="answer-section">
+            <h2>Question Asked:</h2>
+            <p>{{ question }}</p>  <!-- Display the question here -->
+
+            <h2>Answer:</h2>
+            <p>{{ answer | replace('\n', '<br>') | safe }}</p>  <!-- Display the answer with new lines -->
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

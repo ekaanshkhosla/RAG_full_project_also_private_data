@@ -1,0 +1,113 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Container to center the content */
+.container {
+    width: 80%;
+    max-width: 2000px;
+    margin: 50px auto;  /* Center the container vertically and horizontally */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Answer section */
+.answer-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Slight shadow for depth */
+}
+
+.answer-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.answer-section p {
+    font-size: 16px;
+    white-space: pre-wrap; /* Preserve line breaks in answer */
+    word-wrap: break-word; /* Prevent overflow for long words */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;  /* Increase container width on smaller screens */
+    }
+
+    input[type="text"] {
+        width: 100%;  /* Make the input field fill the available space */
+        margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    }
+
+    button {
+        width: 100%;  /* Make button full-width on smaller screens */
+        padding: 10px;
+    }
+
+    .logo {
+        width: 100px;  /* Reduce logo size for smaller screens */
+    }
+}
